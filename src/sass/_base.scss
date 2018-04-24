@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+//variables
+$white: #fff;
+$lato: 'Lato', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: $lato;
+    -webkit-font-smoothing: antialiased;
+}

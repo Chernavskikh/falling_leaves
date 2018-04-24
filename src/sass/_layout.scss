@@ -1,0 +1,55 @@
+.hero {
+    @include flexbox(column, center, center);
+
+    background-image: url('../../dist/img/hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $white;
+    text-align: center;
+    padding: 25px 50px;
+    min-height: 50vh;
+    position: relative;
+
+    &__title {
+        font-size: 24px;
+    }
+
+    &__text {
+        max-width: 80vw;
+        margin: 30px auto;
+    }
+
+    &__video-link {
+        color: #fff;
+        font-size: 14px;
+        display: inline-flex;
+        text-decoration: none;
+        margin-top: 20px;
+        transition: all 0.2s;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            top: -2px;
+            position: relative;
+        }
+    }
+
+    &__phone {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20%;
+        width: 45vh;
+    }
+
+    .btn + .btn {
+        margin-top: 20px;
+    }
+
+    @include lg {
+        min-height: 70vh;
+    }
+}

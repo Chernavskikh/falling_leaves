@@ -16,7 +16,6 @@ gulp.task('connect', function() {
     connect.server({
         name: 'Dev App',
         root: '.',
-        port: 8001,
         livereload: true
     });
 });
