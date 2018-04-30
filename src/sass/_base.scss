@@ -11,7 +11,20 @@ $lato: 'Lato', sans-serif;
 }
 
 body {
-    font-size: 16px;
+    font-size: 14px;
     font-family: $lato;
     -webkit-font-smoothing: antialiased;
+    color: #58627C;
+}
+
+a {
+    color: #4A90E2;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+        color: darken(#4A90E2, 15%);
+    }
 }

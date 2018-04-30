@@ -1,4 +1,5 @@
 .btn {
+    display: inline-block;
     font-size: 16px;
     padding: 10px 20px;
     border-radius: 48px;
@@ -30,5 +31,176 @@
             // background-image: linear-gradient(-180deg, darken(#2170D3, 15%) 3%, darken(#2955BA, 15%) 100%);
             opacity: 0.8;
         }
+    }
+
+    &--transparent {
+        border: 2px solid #E8EDFA;
+        color: #58627C;
+        margin-top: 35px;
+
+        img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: rgba(#9A9ADE, 0.95);
+            color: #58627C;
+            text-decoration: none;
+        }
+    }
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.title-md {
+    font-size: 34px;
+    color: #58627C;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.title-sm {
+    font-size: 18px;
+    color: #58627C;
+    letter-spacing: 0;
+}
+
+.text-primary {
+    line-height: 1.85;
+}
+
+.manage {
+    background-color: #E8EDFA;
+    padding-top: 80px;
+    position: relative;
+    padding-bottom: 30%;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 35px;
+
+        @include lg {
+            margin-bottom: 70px;
+        }
+    }
+
+    .link-text {
+        margin-top: 35px;
+        position: relative;
+        z-index: 100;
+
+        @include lg {
+            margin-top: 70px;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        min-height: 30%;
+        background: url('../img/waves.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 50;
+
+        @include lg {
+            min-height: 585px;
+        }
+    }
+
+    @include lg {
+        padding-bottom: 585px;
+    }
+}
+
+.manage-wrapper {
+    @include flexbox(column, center, center);
+
+    @include lg {
+        flex-direction: row;
+    }
+}
+
+.manage-item {
+    @include flexbox(column, center, flex-start);
+
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    padding: 0 15px;
+
+    &__title {
+        margin-bottom: 10px;
+        margin-top: 27px;
+    }
+
+    &__text {
+        margin-bottom: 35px;
+    }
+
+    @include sm {
+        max-width: 80%;
+    }
+
+    @include lg {
+        max-width: 318px;
+    }
+
+    @include xl {
+        max-width: 350px;
+        margin: 0 20px;
+    }
+}
+
+.data-managment {
+    padding: 30px 15px;
+    text-align: center;
+
+    &__subheader {
+        margin-bottom: 48px;
+        margin-top: 5px;
+    }
+
+    &__image {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        margin-top: 40px;
+    }
+
+    p {
+        @include sm {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        @include lg {
+            margin-left: 0;
+            max-width: 425px;
+        }
+    }
+
+    @include lg {
+        @include flexbox(row, center, flex-start);
+
+        &__section {
+            flex: 0 0 50%;
+
+            &--left {
+                text-align: left;
+                padding-left: 30px;
+            }
+        }
+    }
+
+    @include xl {
+        padding-left: 10vw;
     }
 }
